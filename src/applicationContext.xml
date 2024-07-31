@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- loading from the property file named sport.properties -->
+
+    <context:property-placeholder location="classpath:sport.properties"/>
+
+
+    <!-- Define your beans here -->
+    <bean id="happyFortune"
+          class="com.spring.HappyFortuneService">
+    </bean>
+
+
+    <!-- define the dependency -->
+    <bean id="baseball"
+          class="com.spring.BaseballCoach">
+        <constructor-arg ref="happyFortune"/>
+    </bean>
+
+
+    <bean id="cricket"
+          class="com.spring.CricketCoach">
+        <constructor-arg ref="happyFortune"/>
+    </bean>
+
+    <bean id="track"
+          class="com.spring.TrackCoach"
+          init-method="startUpStuff"
+          destroy-method="destroyStuff">
+
+        <property name="fortuneService" ref="happyFortune"/>
+
+
+    </bean>
+
+    <bean id="laptop"
+          class="com.spring.LaptopForLiteralSetterInjection">
+        <property name="brand" value="${brand}"/>
+        <property name="os" value="Linux"/>
+    </bean>
+
+    <bean id="colorId"
+          class="com.constructor_injection.Color"
+          autowire="no">
+        <constructor-arg name="intensity" value="Medium" index="1" type="String"/>
+        <constructor-arg name="color" value="Purple" index="0" type="String"/>
+    </bean>
+
+    <bean id="student"
+          class="com.setter_injection.Student">
+    </bean>
+
+    <bean id="black"
+          class="com.setter_injection.Black">
+    </bean>
+
+    <bean id="blue"
+          class="com.setter_injection.Blue">
+    </bean>
+
+
+    <bean
+            id="setter"
+            class="com.setter_injection.Application">
+        <property name="name" value="David"/>
+        <property name="color" value="${color}"/>
+        <property name="student" ref="student"/>
+        <property name="colorList">
+            <list>
+                <ref bean="black"/>
+                <ref bean="blue"/>
+                <bean id="purple" class="com.setter_injection.Purple"/>
+            </list>
+        </property>
+    </bean>
+</beans>
+
+
+
+
+

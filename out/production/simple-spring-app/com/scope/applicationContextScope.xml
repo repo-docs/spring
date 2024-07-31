@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--
+         When the scope is prototype objects are initialized
+         when explicitly called in the mail method and in case of
+         singleton scope when the configuration loads there itself object get initialized
+     -->
+
+    <bean id="app" class="com.scope.App" scope="prototype">
+<!--        <constructor-arg value="Ravi" />-->
+        <property name="name" value="Robert" />
+    </bean>
+
+    <bean id="appTwo" class="com.scope.App" scope="prototype">
+                <constructor-arg value="Ravi" />
+<!--        <property name="name" value="Robert" />-->
+    </bean>
+
+</beans>

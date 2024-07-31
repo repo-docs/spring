@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="texture" class="com.autowire.Texture"/>
+    <!--
+         autowire="byName" by default uses setter injection,
+         you have to make sure id name is same as property name in the table class
+         and setter method is implemented.
+    -->
+    <bean id="table" class="com.autowire.Table" autowire="byName" />
+
+    <!--
+         autowire="byType" is similar to "byName", just that now you have the freedom
+         to name your id whatever you want, it does not check by name anymore,
+         the problem is if you have two beans of the same class, then you will get NoUniqueBeanDefinition or UnsatisfiedDependencyException.
+    -->
+
+    <!--
+        In constructor mode of auto wiring, autowire="constructor",
+        again there is no mandate to have, bean id same as property name as the dependency now
+        is autowired based on type of property instead of the name.
+        However, it is mandatory to have parameterized constructor in the ReportService class because the dependency is now injected through the constructor.
+     -->
+    <bean id="colorId" class="com.autowire.Color" autowire="no"/>
+    <bean id="colorTable" class="com.autowire.ColorTable" autowire="constructor" scope="singleton"/>
+
+</beans>

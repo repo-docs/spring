@@ -11,5 +11,31 @@
     <bean id="greetingServiceBean2" class="com.example.GreetingService">
         <constructor-arg value="Hello from Spring (Constructor Injection)!"/>
     </bean>
+<!--    when scope is not mentioned, it is considered singleton by default.  -->
+    <bean id="mySingletonService" class="com.example.MyService"/>
+
+    <bean id="myPrototypeService" class="com.example.MyService" scope="prototype"/>
+
+    <bean id="userPreferences" class="com.example.UserPreferences" scope="request"/>
+
+    <bean id="lifecycleDemoBeanPrototype"
+          class="com.example.MyService"
+          init-method="customInit"
+          destroy-method="customDestroy"
+          scope="prototype"/>
+
+    <bean id="lifecycleDemoBeanSingleton"
+          class="com.example.MyService"
+          init-method="customInit"
+          destroy-method="customDestroy"/>
+
+    <bean id="myDataSource" class="com.example.DataSourceBean">
+        <property name="connectionURL" value="jdbc:mysql://localhost:3306/mydb"/>
+    </bean>
+
+    <bean id="reportService" class="com.example.ReportService">
+        <property name="dataSource" ref="myDataSource"/>
+    </bean>
+
 
 </beans>

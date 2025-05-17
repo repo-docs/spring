@@ -25,7 +25,16 @@ public class Main {
         System.out.print("Service 2 says: ");
         service2.sayGreeting();
 
+        MyService lifecycleDemoBean = context.getBean("lifecycleDemoBean", MyService.class);
+
+        ReportService reportService = context.getBean("reportService", ReportService.class);
+        reportService.generateReport();
         // Close the context (important in non-web applications to release resources)
         context.close();
+
+        ClassPathXmlApplicationContext contextHolder = new ClassPathXmlApplicationContext("collectionHolderContext.xml");
+        CollectionHolder collectionHolder = contextHolder.getBean("collectionHolder", CollectionHolder.class);
+        collectionHolder.displayCollections();
+        contextHolder.close();
     }
 }

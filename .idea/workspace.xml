@@ -5,10 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fca98fb-cf8f-49c8-aad7-274c522905d1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/example/GreetingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/example/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/autowireContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/collectionHolderContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/example/CollectionHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/example/DataSourceBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/example/MyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/example/ReportService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/example/autowiring/AutowireDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/example/autowiring/InventoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/example/autowiring/NotificationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/example/autowiring/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/example/autowiring/applicationContext-byName.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/example/autowiring/applicationContext-constructor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/example/properties/PropertyDriver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/example/properties/SimpleDataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/example/properties/propertiesContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/database.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +66,20 @@
       <recent name="C:\Users\debay\IdeaProjects\spring-workout" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.PropertyDriver">
+    <configuration name="AutowireDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.autowiring.AutowireDriver" />
+      <module name="spring-workout" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.autowiring.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.Main" />
       <module name="spring-workout" />
@@ -65,8 +93,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PropertyDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.properties.PropertyDriver" />
+      <module name="spring-workout" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.properties.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PropertyDriver" />
+        <item itemvalue="Application.AutowireDriver" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>

@@ -1,0 +1,45 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/util
+           http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="collectionHolder" class="com.example.CollectionHolder">
+        <property name="nameList">
+            <list>
+                <value>Alice</value>
+                <value>Bob</value>
+                <value>Alice</value> </list>
+        </property>
+        <property name="uniqueNames">
+            <set>
+                <value>Charlie</value>
+                <value>David</value>
+                <value>Charlie</value> </set>
+        </property>
+        <property name="itemCounts">
+            <map>
+                <entry key="Apples" value="5"/>
+                <entry key="Bananas" value="10"/>
+            </map>
+        </property>
+        <property name="dbConfig">
+            <props>
+                <prop key="db.url">jdbc:exampledb</prop>
+                <prop key="db.username">user</prop>
+            </props>
+        </property>
+    </bean>
+
+    <util:list id="sharedNameList" list-class="java.util.ArrayList">
+        <value>External Alice</value>
+        <value>External Bob</value>
+    </util:list>
+
+    <bean id="anotherCollectionHolder" class="com.example.CollectionHolder">
+        <property name="nameList" ref="sharedNameList"/>
+    </bean>
+
+</beans>

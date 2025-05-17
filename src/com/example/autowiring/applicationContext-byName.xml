@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="inventoryService" class="com.example.autowiring.InventoryService">
+        <property name="serviceName" value="MainInventorySystem"/>
+    </bean>
+
+    <bean id="notificationService" class="com.example.autowiring.NotificationService">
+        <property name="notificationType" value="SMS"/>
+    </bean>
+
+    <bean id="orderServiceByName" class="com.example.autowiring.OrderService" autowire="byName"/>
+
+</beans>

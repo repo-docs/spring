@@ -5,25 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fca98fb-cf8f-49c8-aad7-274c522905d1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/autowireContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/collectionHolderContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/example/CollectionHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/example/DataSourceBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/example/MyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/example/ReportService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/example/autowiring/AutowireDriver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/example/autowiring/InventoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/example/autowiring/NotificationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/example/autowiring/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/example/autowiring/applicationContext-byName.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/example/autowiring/applicationContext-constructor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/example/properties/PropertyDriver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/example/properties/SimpleDataSource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/example/properties/propertiesContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/database.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/example/annotation/Coach.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/example/annotation/CricketCoach.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/example/annotation/Driver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/example/annotation/LocationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/example/annotation/annotationApplicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/example/annotation/base/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/autowireContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/autowireContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collectionHolderContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/collectionHolderContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/example/CollectionHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/xmlbased/CollectionHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/example/DataSourceBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/xmlbased/DataSourceBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/example/GreetingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/xmlbased/GreetingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/xmlbased/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/example/MyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/xmlbased/MyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/example/ReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/xmlbased/ReportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/example/properties/propertiesContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/properties/propertiesContext.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +32,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -55,6 +55,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "C:/Users/debay/IdeaProjects/spring-workout/libs",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
@@ -65,8 +66,11 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\debay\IdeaProjects\spring-workout" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\debay\IdeaProjects\spring-workout\src\com\example\annotation" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.PropertyDriver">
+  <component name="RunManager" selected="Application.Driver">
     <configuration name="AutowireDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.autowiring.AutowireDriver" />
       <module name="spring-workout" />
@@ -80,12 +84,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.Main" />
+    <configuration name="Driver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.annotation.Driver" />
       <module name="spring-workout" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example.*" />
+          <option name="PATTERN" value="com.example.annotation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.xmlbased.Main" />
+      <module name="spring-workout" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.xmlbased.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -108,6 +125,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Driver" />
         <item itemvalue="Application.PropertyDriver" />
         <item itemvalue="Application.AutowireDriver" />
         <item itemvalue="Application.Main" />

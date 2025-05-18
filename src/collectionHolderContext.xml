@@ -6,7 +6,7 @@
            http://www.springframework.org/schema/util
            http://www.springframework.org/schema/util/spring-util.xsd">
 
-    <bean id="collectionHolder" class="com.example.CollectionHolder">
+    <bean id="collectionHolder" class="com.example.xmlbased.CollectionHolder">
         <property name="nameList">
             <list>
                 <value>Alice</value>
@@ -38,7 +38,7 @@
         <value>External Bob</value>
     </util:list>
 
-    <bean id="anotherCollectionHolder" class="com.example.CollectionHolder">
+    <bean id="anotherCollectionHolder" class="com.example.xmlbased.CollectionHolder">
         <property name="nameList" ref="sharedNameList"/>
     </bean>
 

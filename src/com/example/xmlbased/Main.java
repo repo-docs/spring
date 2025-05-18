@@ -1,6 +1,5 @@
-package com.example;
+package com.example.xmlbased;
 
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {

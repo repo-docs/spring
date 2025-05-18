@@ -1,4 +1,4 @@
-package com.example;
+package com.example.xmlbased;
 
 import java.util.List;
 import java.util.Map;

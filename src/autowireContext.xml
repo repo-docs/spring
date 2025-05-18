@@ -6,11 +6,11 @@
            http://www.springframework.org/schema/util
            http://www.springframework.org/schema/util/spring-util.xsd">
 
-    <bean id="myDataSource" class="com.example.DataSourceBean">
+    <bean id="myDataSource" class="com.example.xmlbased.DataSourceBean">
         <property name="connectionURL" value="jdbc:mysql://localhost:3306/mydb"/>
     </bean>
     
-    <bean id="reportService" class="com.example.ReportService" autowire="byType" />
+    <bean id="reportService" class="com.example.xmlbased.ReportService" autowire="byType" />
 
     
 </beans>

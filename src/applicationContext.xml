@@ -4,36 +4,34 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="greetingServiceBean1" class="com.example.GreetingService">
-        <property name="message" value="Hello from Spring (Setter Injection)!"/>
-    </bean>
 
-    <bean id="greetingServiceBean2" class="com.example.GreetingService">
+
+    <bean id="greetingServiceBean2" class="com.example.xmlbased.GreetingService">
         <constructor-arg value="Hello from Spring (Constructor Injection)!"/>
     </bean>
 <!--    when scope is not mentioned, it is considered singleton by default.  -->
-    <bean id="mySingletonService" class="com.example.MyService"/>
+    <bean id="mySingletonService" class="com.example.xmlbased.MyService"/>
 
-    <bean id="myPrototypeService" class="com.example.MyService" scope="prototype"/>
+    <bean id="myPrototypeService" class="com.example.xmlbased.MyService" scope="prototype"/>
 
     <bean id="userPreferences" class="com.example.UserPreferences" scope="request"/>
 
     <bean id="lifecycleDemoBeanPrototype"
-          class="com.example.MyService"
+          class="com.example.xmlbased.MyService"
           init-method="customInit"
           destroy-method="customDestroy"
           scope="prototype"/>
 
     <bean id="lifecycleDemoBeanSingleton"
-          class="com.example.MyService"
+          class="com.example.xmlbased.MyService"
           init-method="customInit"
           destroy-method="customDestroy"/>
 
-    <bean id="myDataSource" class="com.example.DataSourceBean">
+    <bean id="myDataSource" class="com.example.xmlbased.DataSourceBean">
         <property name="connectionURL" value="jdbc:mysql://localhost:3306/mydb"/>
     </bean>
 
-    <bean id="reportService" class="com.example.ReportService">
+    <bean id="reportService" class="com.example.xmlbased.ReportService">
         <property name="dataSource" ref="myDataSource"/>
     </bean>
 

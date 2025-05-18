@@ -1,4 +1,4 @@
-package com.example;
+package com.example.xmlbased;
 
 // In MyService.java
 public class MyService {
